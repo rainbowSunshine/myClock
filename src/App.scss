@@ -1,0 +1,76 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  background: #8d438e;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  #root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .main-title {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+    .length-control {
+      width: 250px;
+    }
+    button {
+      background: none;
+      outline: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .btn-level,
+    .length-control {
+      display: inline-block;
+      .btn-level:nth-child(3) {
+        width: 80px;
+      };
+      input {
+        width: 3em;
+        height: 1.5em;
+        position: relative;
+        top: -5px;
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .timer {
+      border: 7px solid #13353a;
+      margin: 20px auto 10px auto;
+      width: 270px;
+      height: 160px;
+      border-radius: 50px;
+      position: relative;
+      .timer-wrapper {
+        position: absolute;
+        width: 190px;
+        height: 110px;
+        left: 40px;
+        margin-top: 20px ;
+      }
+      #time-left {
+        font-family: digital;
+        font-size: 80px;
+      }
+      .timer-control button:active {
+        color: #13353a;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #root {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+}
